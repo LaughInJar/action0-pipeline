@@ -4,20 +4,19 @@ dynamic = ["version"]
 authors = [
     { name="Simon Lachinger" },
 ]
-description = "Composable, fully typed processing pipelines for Python"
+description = "asyncio pipelines with per-step parallelism for blocking-IO workloads"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = []
-keywords = ["pipeline", "stages", "composition", "typed", "sync", "async"]
+keywords = ["asyncio", "pipeline", "concurrency", "parallelism", "threads", "backpressure", "streaming"]
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: 3.15",
@@ -65,7 +64,7 @@ packages = ["src/action0"]
 line-length = 99
 indent-width = 4
 # lint against the oldest supported Python so newer-only syntax is flagged
-target-version = "py311"
+target-version = "py313"
 exclude = [
     ".git",
     "dist",
@@ -122,7 +121,7 @@ consider_namespace_packages = true
 
 [tool.mypy]
 # check against the oldest supported Python version
-python_version = "3.11"
+python_version = "3.13"
 files = ["src", "tests"]
 strict = true
 # "action0" is a PEP 420 namespace package (no __init__.py in src/action0),
@@ -132,4 +131,4 @@ explicit_package_bases = true
 
 [tool.pyright]
 # check against the oldest supported Python version
-pythonVersion = "3.11"
+pythonVersion = "3.13"

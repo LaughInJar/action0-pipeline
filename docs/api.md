@@ -1,15 +1,24 @@
 # API reference
 
-The public classes and functions are importable from the package root:
+Everything public is importable from the package root:
 
 ```python
-import action0.pipeline
+from action0.pipeline import Buffer, ErrorPolicy, Pipeline, StepDefinition
 ```
 
-## Package root
+## Pipeline
 
 ```{eval-rst}
-.. automodule:: action0.pipeline
+.. automodule:: action0.pipeline.pipeline
+   :members:
+   :undoc-members:
+   :special-members: __aiter__, __aenter__, __aexit__
+```
+
+## Buffer
+
+```{eval-rst}
+.. automodule:: action0.pipeline.buffer
    :members:
    :undoc-members:
 ```
